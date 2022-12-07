@@ -1,4 +1,3 @@
-import json
 from collections.abc import Iterable, Mapping
 from dataclasses import asdict, is_dataclass
 from inspect import isclass
@@ -103,8 +102,3 @@ def to_yaml(obj, stream=None):
 
 def from_yaml(clz: Type, stream):
     return parse(clz, yaml.load(stream, yaml.Loader))
-
-
-def pretty_json(hp):
-    json_hp = json.dumps(hp, indent=2)
-    return "".join("\t" + line for line in json_hp.splitlines(True))
