@@ -1,5 +1,5 @@
-# miniconf
-minimalist configuration files stored as YAML
+# mlparams
+minimalist hyperparam configuration files stored as YAML
 
 ## usage
 
