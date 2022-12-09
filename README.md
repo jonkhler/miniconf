@@ -6,7 +6,7 @@ minimalist configuration files stored as YAML
 ```python
 from dataclasses import dataclass
 
-from .config import from_yaml, to_yaml
+from mlparams import from_yaml, to_yaml
 
 
 @dataclass(frozen=True)
