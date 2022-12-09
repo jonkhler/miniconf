@@ -130,14 +130,12 @@ def _mutable_nested_dict_update(
     strict_keys: bool = True,
     ignore_value: Callable[[Any], bool] | None = None,
 ) -> dict:
-    print(old, new)
     if ignore_value is None:
         ignore_value = lambda v: v is None
     for key, val in new.items():
         if key in old:
             if not ignore_value(val):
                 if isinstance(val, dict):
-                    print(key, val)
                     old[key] = _mutable_nested_dict_update(
                         old[key],
                         val,
